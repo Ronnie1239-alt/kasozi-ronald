@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasozi Battery Solutions</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0066cc;
+      color: white;
+      min-height: 100%;
+    }
+
+    * { box-sizing: border-box; }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background: #0052a3;
+      padding: 20px 0;
+      border-bottom: 2px solid #004080;
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    h1 {
+      color: white;
+      font-size: 24px;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+
+    .nav-link:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .nav-link.active {
+      background: #ff6b35;
+      color: white;
+    }
+
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    .contact-link {
+      background: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: normal;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(255,255,255,0.1);
+      margin: 20px 0;
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      margin: 0 0 10px 0;
+      color: white;
+    }
+
+    .hero p {
+      font-size: 16px;
+      margin: 0 0 15px 0;
+      color: white;
+    }
+
+    .warranty-badge {
+      display: inline-block;
+      background: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: normal;
+    }
+
+    .info-box {
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      margin: 20px 0;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .info-box h3 {
+      font-size: 20px;
+      margin: 0 0 10px 0;
+      color: white;
+    }
+
+    .info-box p {
+      line-height: 1.6;
+      margin: 5px 0;
+      color: white;
+    }
+
+    .price-box {
+      text-align: center;
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      margin: 20px 0;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .price {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #ff6b35;
+    }
+
+    .product-image {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    footer {
+      background: rgba(0,0,0,0.2);
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      border-top: 2px solid rgba(255,255,255,0.3);
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 20px; }
+      .hero h2 { font-size: 24px; }
+      .header-content { flex-direction: column; }
+      nav { flex-direction: column; gap: 10px; }
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+ </head>
+ <body>
+  <header>
+   <div class="container">
+    <div class="header-content">
+     <h1 id="business-name">Kasozi Battery Solutions</h1>
+     <nav><a href="#home" class="nav-link active" data-page="home">Home</a> <a href="#products" class="nav-link" data-page="products">Products</a> <a href="#contact" class="nav-link" data-page="contact">Contact</a>
+     </nav>
+    </div>
+   </div>
+  </header>
+  <main>
+   <div id="home" class="page active">
+    <section class="hero">
+     <div class="container">
+      <h2>Car Battery Solutions</h2>
+      <p>Battery replacement and installation service.</p>
+      <div class="warranty-badge">
+       1 Year Warranty
+      </div>
+     </div>
+    </section>
+    <section class="container">
+     <div class="info-box">
+      <h3>Our Services</h3>
+      <p>We solve all your car battery problems quickly and professionally.</p>
+     </div>
+     <div class="info-box">
+      <h3>Battery Replacement</h3>
+      <p>Dead battery? We replace it immediately with a quality battery.</p>
+      <p>Professional installation included.</p>
+     </div>
+     <div class="info-box">
+      <h3>Battery Testing</h3>
+      <p>Car won't start? We test your battery for free.</p>
+      <p>Know exactly what's wrong before you spend money.</p>
+     </div>
+     <div class="info-box">
+      <h3>Jump Start Service</h3>
+      <p>Stranded with a dead battery? We provide quick jump start service.</p>
+      <p>Get back on the road fast.</p>
+     </div>
+     <div class="info-box">
+      <h3>Battery Installation</h3>
+      <p>Bought a battery elsewhere? We can install it for you.</p>
+      <p>Professional installation service available.</p>
+     </div>
+     <div class="info-box">
+      <h3>Emergency Service</h3>
+      <p>Need help right now? We offer same-day emergency battery service.</p>
+      <p>Call us and we'll help you immediately.</p>
+     </div>
+    </section>
+   </div>
+   <div id="products" class="page">
+    <section class="container">
+     <h2 style="margin: 30px 0 20px 0; color: white;">Our Products</h2>
+     <div class="price-box"><img src="https://i.ibb.co/VY20qyky/download.jpg" alt="Car Battery" class="product-image" onerror="this.style.display='none';">
+      <h3>Car Battery</h3>
+      <div class="price">
+       200,000 UGX
+      </div>
+      <p>Installation included</p>
+      <p>1 Year Warranty</p>
+     </div>
+     <div class="info-box">
+      <h3>Product Details</h3>
+      <p>High quality car batteries for all vehicle types.</p>
+      <p>Professional installation service included.</p>
+      <p>Free battery health check with every purchase.</p>
+     </div>
+    </section>
+   </div>
+   <div id="contact" class="page">
+    <section class="container">
+     <h2 style="margin: 30px 0 20px 0; color: white;">Contact Us</h2>
+     <div class="info-box">
+      <h3>Location</h3>
+      <p><strong>Address:</strong> Entebbe Road, After Shell Kaazi, Uganda</p>
+     </div>
+     <div class="info-box">
+      <h3>Phone</h3>
+      <p><strong>Call us:</strong> <a href="tel:0751296743" style="color: white; text-decoration: underline;" id="phone-link-page">0751 296 743</a></p>
+     </div>
+     <div class="info-box">
+      <h3>Business Hours</h3>
+      <p>Open 7 Days a Week</p>
+      <p>8:00 AM - 7:00 PM</p>
+     </div>
+    </section>
+   </div>
+  </main>
+  <footer>
+   <div class="container">
+    <p>© 2025 Kasozi Battery Solutions | 1 Year Warranty | Entebbe Road | 0751 296 743</p>
+   </div>
+  </footer>
+  <script>
+    const defaultConfig = {
+      business_name: "Kasozi Battery Solutions",
+      phone_number: "0751 296 743"
+    };
+
+    const pages = document.querySelectorAll('.page');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetPage = link.dataset.page;
+        
+        pages.forEach(page => page.classList.remove('active'));
+        document.getElementById(targetPage).classList.add('active');
+        
+        navLinks.forEach(navLink => navLink.classList.remove('active'));
+        link.classList.add('active');
+        
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    async function onConfigChange(config) {
+      const name = config.business_name || defaultConfig.business_name;
+      const phone = config.phone_number || defaultConfig.phone_number;
+      
+      document.getElementById('business-name').textContent = name;
+      
+      const phoneLinkPage = document.getElementById('phone-link-page');
+      if (phoneLinkPage) {
+        phoneLinkPage.textContent = phone;
+        phoneLinkPage.href = 'tel:' + phone.replace(/\s/g, '');
+      }
+    }
+
+    function mapToCapabilities(config) {
+      return {
+        recolorables: [],
+        borderables: [],
+        fontEditable: undefined,
+        fontSizeable: undefined
+      };
+    }
+
+    function mapToEditPanelValues(config) {
+      return new Map([
+        ["business_name", config.business_name || defaultConfig.business_name],
+        ["phone_number", config.phone_number || defaultConfig.phone_number]
+      ]);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities,
+        mapToEditPanelValues
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a08a264c04073f8',t:'MTc2MzQ4MTE0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
